@@ -15,7 +15,7 @@ public class InitialData implements CommandLineRunner {
     private EmbalagemRepository embalagemRepository;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         if(embalagemRepository.count()==0){
             List<Embalagem> embalagens = List.of(
                     Embalagem.builder().descricao("Caixa Modelo 1")

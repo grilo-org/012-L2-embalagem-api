@@ -15,7 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-public class EmbalagemServiceTest {
+class EmbalagemServiceTest {
 
     @Mock
     private EmbalagemRepository embalagemRepository;
@@ -41,11 +41,11 @@ public class EmbalagemServiceTest {
         ResponseDTO resposta = embalagemService.processarPedido(pedidos);
 
         assertEquals(1, resposta.getPedidos().size());
-        PedidoResponseDTO pedidoResp = resposta.getPedidos().get(0);
+        PedidoResponseDTO pedidoResp = resposta.getPedidos().getFirst();
 
         assertEquals(1, pedidoResp.getCaixas().size());
-        assertEquals("Caixa Pequena", pedidoResp.getCaixas().get(0).getEmbalagemId());
-        assertTrue(pedidoResp.getCaixas().get(0).getProdutos().contains("Produto A"));
+        assertEquals("Caixa Pequena", pedidoResp.getCaixas().getFirst().getEmbalagemId());
+        assertTrue(pedidoResp.getCaixas().getFirst().getProdutos().contains("Produto A"));
     }
 
     @Test
@@ -64,10 +64,10 @@ public class EmbalagemServiceTest {
         ResponseDTO resposta = embalagemService.processarPedido(pedidos);
 
         assertEquals(1, resposta.getPedidos().size());
-        PedidoResponseDTO pedidoResp = resposta.getPedidos().get(0);
+        PedidoResponseDTO pedidoResp = resposta.getPedidos().getFirst();
 
         assertEquals(1, pedidoResp.getCaixas().size());
-        EmbalagemDTO caixa = pedidoResp.getCaixas().get(0);
+        EmbalagemDTO caixa = pedidoResp.getCaixas().getFirst();
 
         assertEquals("Sem embalagem", caixa.getEmbalagemId());
         assertTrue(caixa.getProdutos().contains("Produto Grande"));

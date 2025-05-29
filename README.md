@@ -51,8 +51,8 @@ SPRING_PROFILES_ACTIVE=prod
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seuusuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/augusttosantana/embalagem-api
+cd embalagem-api
 ```
 
 2. Para rodar a aplicação em ambiente de desenvolvimento (`dev` profile com H2):
@@ -100,8 +100,9 @@ Use essa interface para testar os endpoints, visualizar os modelos de dados (DTO
 
 Para dúvidas ou sugestões, entre em contato:
 
-- Email: augustto@exemplo.com
-- GitHub: [https://github.com/seuusuario](https://github.com/seuusuario)
+- Email: santana.acesar@gmail.com
+- GitHub: https://github.com/augusttosantana
+- LinkedIn: https://www.linkedin.com/in/augusttosantana/
 
 ---
 
